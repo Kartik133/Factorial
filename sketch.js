@@ -1,4 +1,4 @@
-var gameState = 1,x,y,a,b,c;
+var gameState = 1,x,y,a,b,c,p=0,r;
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
@@ -15,6 +15,16 @@ function setup() {
 
 function draw() {
   background(0);
+
+  frameRate(300);
+
+  r = frameRate();
+
+  if(p<r){
+    p=r
+  }
+
+  console.log(p,floor(r));
 
   if(gameState===1) {
     a.show();
